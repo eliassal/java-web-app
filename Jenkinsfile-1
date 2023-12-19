@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Scan') {
       steps {
-        sh 'trivy image --format template --template "/usr/local/share/trivy/templates/html.tpl" -o report.html darinpope/java-web-app:latest'
+        sh 'trivy image --format template --template /usr/local/share/trivy/templates/html.tpl -o report.html darinpope/java-web-app:latest'
       }
     }
   }
